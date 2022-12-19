@@ -11,9 +11,11 @@ jobs:
                   to: ${{ secrets.TELEGRAM_TEST_BOT_USER }}
                   token: ${{ secrets.TELEGRAM_TEST_BOT_API }}
                   message: |
-                      ${{ github.actor }} created commit:
-                      Commit message: ${{ github.event.commits[0].message }}
-
+                      ${{ github.actor }} created a pull request:
+                      Title: ${{ github.event.pull_request.title }}
+                      Target branch: ${{ github.event.pull_request.base.ref }}
+                      URL: ${{ github.event.pull_request.url }}
+                      
                       Repository: ${{ github.repository }}
 
                       See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
