@@ -2,7 +2,7 @@ name: telegram message test
 on: [push]
 jobs:
     build:
-        name: Telegram Message
+        name: Telegram Message 1
         runs-on: ubuntu-latest
         steps:
             - name: send telegram message on push
