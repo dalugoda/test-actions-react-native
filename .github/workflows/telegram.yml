@@ -3,7 +3,7 @@ on: [push]
 jobs:
     build:
         name: Telegram Message
-        runs-on: RUNNER-LINUX2
+        runs-on: ubuntu-latest
         steps:
             - name: send telegram message on push
               uses: appleboy/telegram-action@master
