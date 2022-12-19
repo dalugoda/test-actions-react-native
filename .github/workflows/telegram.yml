@@ -8,7 +8,7 @@ jobs:
             - name: send telegram message on push
               uses: appleboy/telegram-action@master
               with:
-                  to: sandupagithubtest_bot #${{ secrets.TELEGRAM_TO }}
+                  to: t.me/sandupagithubtest_bot #${{ secrets.TELEGRAM_TO }}
                   token: ${{ secrets.TELEGRAM_TEST_BOT_API }}
                   message: |
                       ${{ github.actor }} created commit:
