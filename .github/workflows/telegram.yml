@@ -14,8 +14,5 @@ jobs:
                       ${{ github.actor }} created a pull request:
                       Title: ${{ github.event.pull_request.title }}
                       Target branch: ${{ github.event.pull_request.base.ref }}
-                      URL: ${{ github.event.pull_request.url }}
                       
-                      Repository: ${{ github.repository }}
-
-                      See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+                      See PR: ${{ github.server_url }}/${{ github.repository }}/pulls/${{ github.event.pull_request.id }}
