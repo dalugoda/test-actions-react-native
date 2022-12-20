@@ -16,5 +16,12 @@ export const TestApp = () => {
       // 'p' is trashed and has value of 'dirty'!
   }
   
+  function bar() {
+    if (condition1) {
+        return;
+      }
+      return false;
+  }
+  
   return <View />;
 };
