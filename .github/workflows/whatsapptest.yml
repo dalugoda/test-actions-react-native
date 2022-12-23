@@ -1,0 +1,19 @@
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: whatsapp-notify
+        id: whatsapp-notify
+        env:
+          account_sid: ${{ secrets.wa_account_sid }}
+          auth_token: ${{ secrets.wa_auth_token }}
+          to_whatsapp_no: ${{ secrets.wa_to_whatsapp_no }}
+
+
+        uses: ishween/whatsapp-push-notify-action@master
+      
+      - name : Run
+        run: |
+          echo 'Start!'
